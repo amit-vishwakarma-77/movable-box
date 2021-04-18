@@ -1,0 +1,8 @@
+<div class="box"
+    [id]="boxDetails.boxNo" 
+    [ngClass]="{'active': boxDetails.active, 'hidden':boxDetails.hidden }"
+    (click)="changeColor()"
+    [ngStyle]="{'z-index':boxDetails.boxNo, 'transform': 'translate(' + boxDetails.left + 'px, ' + boxDetails.right + 'px)' }
+    ">
+    <h1>{{boxDetails.boxNo}}</h1>
+</div>

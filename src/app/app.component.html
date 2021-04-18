@@ -1,0 +1,16 @@
+<header>
+  <h1>Moveable Box Generator</h1>
+  <button class="add-button" (click)="addBox()">Add New Box</button>
+  <div class="toggle">
+    <span>Toggle Keyboard events &nbsp;</span>
+    <label class="switch">
+      <input id="key-event" type="checkbox" [checked]="keyboardEvents" (click)="toggleKeyBoardEvent($event)">
+      <span class="slider round"></span>
+    </label>
+  </div>
+</header>
+
+
+<div id="box-container" class="box-container">
+  <app-box (newItemEvent)="selectedBox($event)" [boxDetails]="box" *ngFor="let box of boxes;"></app-box>
+</div>
